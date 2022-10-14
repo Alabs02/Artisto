@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppThunk } from '@/store';
 
-// SERVICE
-import { $api } from '@/services';
 
 // TYPES
 import { IResponse, ISingleResponse, IError, IArtworkState } from './types';
@@ -42,49 +39,6 @@ export const artworksSlice = createSlice({
     },
   },
 });
-
-export const fetchArtworks =
-  ({ page, limit }: { page: number; limit: number }): AppThunk =>
-  async (dispatch) => {
-    dispatch(setLoading(true));
-    const response = await $api
-      .service()
-      .fetch(`/artworks?page=${page}&limit=${limit}`, true);
-
-    if ($api.isSuccessful(response)) {
-      dispatch(setPayload(response?.data));
-    }
-
-    dispatch(setLoading(false));
-  };
-
-export const fetchArtwork =
-  ({ id }: { id: number }): AppThunk =>
-  async (dispatch) => {
-    dispatch(setfetching(true));
-    const response = await $api.service().fetch(`/artworks/${id}`, true);
-
-    if ($api.isSuccessful(response)) {
-      dispatch(setArtworkPayload(response?.data));
-    }
-
-    dispatch(setfetching(false));
-  };
-
-export const searchArtworks =
-  ({ query }: { query: string }): AppThunk =>
-  async (dispatch) => {
-    dispatch(setLoading(true));
-    const response = await $api
-      .service()
-      .fetch(`/search?q=${query.toLowerCase()}`, true);
-
-    if ($api.isSuccessful(response)) {
-      dispatch(setPayload(response?.data));
-    }
-
-    dispatch(setLoading(false));
-  };
 
 const artworksReducer = artworksSlice.reducer;
 

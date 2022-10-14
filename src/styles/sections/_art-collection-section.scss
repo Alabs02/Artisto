@@ -4,11 +4,10 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 
   &__header {
     width: 100%;
-
-    @include base.flex-start-between();
   }
 
   &__heading {
@@ -18,14 +17,15 @@
   }
 
   &__subheading {
-    font-size: base.toRem(20);
-    line-height: base.toRem(30);
+    font-size: base.toRem(18);
+    line-height: base.toRem(28);
     letter-spacing: base.toRem(-0.16);
-    width: 50%;
+    width: 100%;
   }
 
   &__actions {
     width: 100%;
+    margin-top: base.toRem(50);
   }
 
   &__btn {
@@ -35,8 +35,9 @@
   }
 
   &__footer {
-    margin-top: base.toRem(211);
-    margin-bottom: base.toRem(117);
+    position: relative;
+    z-index: 2;
+    margin-top: base.toRem(200);
   }
 
   &__spiral {
@@ -51,6 +52,27 @@
   .collection-section {
     &__actions {
       width: 45%;
+    }
+  }
+}
+
+@include base.breakpoint-up(xl) {
+  .collection-section {
+    &__header {
+      width: 100%;
+  
+      @include base.flex-start-between();
+    }
+
+    &__subheading {
+      font-size: base.toRem(20);
+      line-height: base.toRem(30);
+      width: 50%;
+    }
+
+    &__footer {
+      margin-top: base.toRem(211);
+      margin-bottom: base.toRem(117);
     }
   }
 }

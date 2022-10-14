@@ -1,15 +1,18 @@
 export {
   default as artworksReducer,
   artworksSlice,
-  fetchArtworks,
-  fetchArtwork,
-  searchArtworks,
   setError,
   setLoading,
   setPayload,
   setfetching,
   setArtworkPayload,
 } from './slice';
+
+export {
+  fetchArtworks,
+  fetchArtwork,
+  searchArtworks,
+} from './api-actions';
 
 export type {
   IArtwork,

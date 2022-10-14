@@ -15,14 +15,14 @@
   }
 
   &__heading {
-    font-size: base.toRem(68);
-    line-height: base.toRem(72);
+    font-size: base.toRem(50);
+    line-height: base.toRem(55);
     letter-spacing: base.toRem(-0.48);
   }
 
   &__copy {
-    font-size: base.toRem(20);
-    line-height: base.toRem(30);
+    font-size: base.toRem(18);
+    line-height: base.toRem(28);
     letter-spacing: base.toRem(-0.16);
   }
 
@@ -51,8 +51,8 @@
 
   &__star {
     position: absolute;
-    left: 36%;
-    bottom: 10%;
+    left: 55%;
+    bottom: 5%;
   }
 }
 
@@ -65,6 +65,26 @@
 
     &__copy {
       width: 70%;
+    }
+  }
+}
+
+@include base.breakpoint-up(xl) {
+  .header-section {
+    &__heading {
+      font-size: base.toRem(68);
+      line-height: base.toRem(72);
+    }
+
+    &__copy {
+      font-size: base.toRem(20);
+      line-height: base.toRem(30);
+    }
+
+    &__star {
+      position: absolute;
+      left: 36%;
+      bottom: 10%;
     }
   }
 }

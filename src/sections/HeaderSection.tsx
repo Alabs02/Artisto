@@ -15,7 +15,7 @@ const HeaderSection = () => {
 
         <div className="header-section__body grid grid-col-12 pdx-20 pdx-lg-33">
           <div className="header-section__content col-span-12 col-span-lg-8">
-            <div className="header-section__heading fw-bold">
+            <div className="header-section__heading fw-bold mgt-50">
               Discover amazing art around the{' '}
               <span className="text-accent">world</span>
             </div>

@@ -1,5 +1,6 @@
 @use 'utilities' as util;
 @use 'colors' as color;
+@use 'mixins' as mixin;
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
 
 *,
@@ -24,6 +25,10 @@ body {
   font-size: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  @include mixin.dark-scrollbar();
 }
 
 button {

@@ -5,7 +5,7 @@ import { useParams, useNavigate, NavLink } from 'react-router-dom';
 import { ArrowLeft } from '@/assets/icons';
 
 // STATIC IMAGES
-import { FOOTER_SPIRAL } from '@/assets/images';
+import { FOOTER_SPIRAL, ELLIPSE_IMG } from '@/assets/images';
 
 // COMPONENTS
 import { NavBar } from '@/components/navigation';
@@ -59,7 +59,7 @@ const PreviewPage = (): JSX.Element => {
                 <div
                   className="ssc ssc-square"
                   style={{
-                    height: 350,
+                    height: 400,
                     borderTopLeftRadius: 100,
                     borderBottomRightRadius: 100,
                   }}
@@ -69,12 +69,17 @@ const PreviewPage = (): JSX.Element => {
               <div className="col-span-12 col-span-lg-8 col-span-2xl-9">
                 <div className="ssc-wrapper">
                   <div className="ssc-head-line wf-90 mgb-30"></div>
+                  <div className="ssc-line wf-95 mgb-10"></div>
                   <div className="ssc-line wf-90 mgb-10"></div>
+                  <div className="ssc-line wf-85 mgb-10"></div>
                   <div className="ssc-line wf-80 mgb-10"></div>
+                  <div className="ssc-line wf-75 mgb-10"></div>
                   <div className="ssc-line wf-70 mgb-10"></div>
+                  <div className="ssc-line wf-65 mgb-10"></div>
+                  <div className="ssc-line wf-60 mgb-10"></div>
                   <div className="ssc-line wf-50 mgb-10"></div>
-                  <div className="ssc-line wf-30 mgb-10"></div>
-                  <div className="ssc-line wf-20 mbs"></div>
+                  <div className="ssc-line wf-45 mgb-10"></div>
+                  <div className="ssc-line wf-30"></div>
 
                   <div className="mgt-30 d-flex">
                     <div
@@ -96,19 +101,19 @@ const PreviewPage = (): JSX.Element => {
               <div className="col-span-12 col-span-lg-3">
                 <div className="preview-page__card">
                   <img
-                    src={renderImgSrc(artworkPayload.data.thumbnail.lqip)}
-                    alt={renderData(artworkPayload.data.thumbnail.alt_text)}
+                    src={renderImgSrc(artworkPayload.data?.thumbnail?.lqip)}
+                    alt={renderData(artworkPayload.data?.thumbnail?.alt_text)}
                   />
                 </div>
               </div>
 
               <div className="col-span-12 col-span-lg-9">
-                <div className="preview-page__heading mgb-20">
-                  {renderData(artworkPayload.data.title)}
+                <div className="preview-page__heading mgb-20 mgt-30 mgt-md-0">
+                  {renderData(artworkPayload.data?.title)}
                 </div>
 
                 <div className="preview-page__copy">
-                  {renderData(artworkPayload.data.credit_line)}
+                  {renderData(artworkPayload.data?.credit_line)}
                 </div>
 
                 <div className="preview-page__footer">
@@ -128,14 +133,21 @@ const PreviewPage = (): JSX.Element => {
           )}
 
           <div className="grid h-100"></div>
-
-          <img
-            src={FOOTER_SPIRAL}
-            draggable={false}
-            alt="footer spiral"
-            className="preview-page__spiral"
-          />
         </div>
+
+        <img
+          src={ELLIPSE_IMG}
+          draggable={false}
+          alt="footer ellipse"
+          className="preview-page__ellipse"
+        />
+
+        <img
+          src={FOOTER_SPIRAL}
+          draggable={false}
+          alt="footer spiral"
+          className="preview-page__spiral"
+        />
       </div>
     </Fragment>
   );
