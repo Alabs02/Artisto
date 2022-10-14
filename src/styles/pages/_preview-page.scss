@@ -1,0 +1,65 @@
+@use '../library' as base;
+
+.preview-page {
+  position: relative;
+  overflow-x: hidden;
+
+  &__body {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__panel {
+    position: relative;
+    z-index: 2;
+    @include base.flex-center-between();
+  }
+
+  &__card {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    border-top-left-radius: base.toRem(170);
+    border-bottom-right-radius: base.toRem(170);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: base.toRem(170);
+      border-bottom-right-radius: base.toRem(170);
+    }
+  }
+
+  &__heading {
+    font-weight: 800;
+    font-size: base.toRem(32);
+    line-height: base.toRem(50);
+    letter-spacing: base.toRem(-0.16);
+  }
+
+  &__copy {
+    width: 53%;
+    font-weight: 400;
+    font-size: base.toRem(20);
+    line-height: base.toRem(30);
+    letter-spacing: base.toRem(-0.16);
+  }
+
+  &__btn {
+    width: base.toRem(208.64);
+    height: base.toRem(78);
+  }
+
+  &__footer {
+    margin-top: base.toRem(185);
+    @include base.flex-center-start();
+  }
+
+  &__spiral {
+    position: absolute;
+    bottom: 0;
+    right: -250px;
+    z-index: 1;
+  }
+}

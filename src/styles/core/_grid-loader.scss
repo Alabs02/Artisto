@@ -1,0 +1,11 @@
+@use '../library' as base;
+
+.grid-loader {
+  &__card {
+    width: 100%;
+    height: base.toRem(450) !important;
+
+    border-top-left-radius: base.toRem(180) !important;
+    border-bottom-right-radius: base.toRem(180) !important;
+  }
+}

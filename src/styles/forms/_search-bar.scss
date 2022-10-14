@@ -1,0 +1,31 @@
+@use '../library' as base;
+
+.search-bar {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: base.toRem(20);
+    transform: translateY(-50%);
+    color: base.$brand-accent;
+
+    &--prepend {
+      left: base.toRem(20);
+    }
+
+    &--append {
+      right: base.toRem(20);
+    }
+  }
+
+  &__input {
+    &--prepend {
+      padding-left: base.toRem(60);
+    }
+
+    &--append {
+      padding-right: base.toRem(60);
+    }
+  }
+}

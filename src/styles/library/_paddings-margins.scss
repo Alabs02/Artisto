@@ -1,10 +1,10 @@
 @use 'utilities' as util;
 @use 'breakpoints' as media;
 
-$size: 150;
-$nsize: -60;
+$pmsize: 150;
+$pmnsize: -60;
 
-@for $n from 0 through $size {
+@for $n from 0 through $pmsize {
   .fs-#{$n} {
     font-size: util.toRem($n) !important;
   }
@@ -139,7 +139,7 @@ $nsize: -60;
     display: block !important;
   }
 
-  @for $n from 0 through $size {
+  @for $n from 0 through $pmsize {
     .fs-md-#{$n} {
       font-size: util.toRem($n) !important;
     }
@@ -253,7 +253,7 @@ $nsize: -60;
     display: block !important;
   }
 
-  @for $n from 0 through $size {
+  @for $n from 0 through $pmsize {
     .fs-lg-#{$n} {
       font-size: util.toRem($n) !important;
     }
@@ -358,7 +358,7 @@ $nsize: -60;
   }
 }
 
-@for $n from -1 through $nsize {
+@for $n from -1 through $pmnsize {
   .nfs-#{$n} {
     font-size: util.toRem($n) !important;
   }
@@ -463,7 +463,7 @@ $nsize: -60;
 }
 
 @include media.breakpoint-up(md) {
-  @for $n from -1 through $nsize {
+  @for $n from -1 through $pmnsize {
     .nfs-md-#{$n} {
       font-size: util.toRem($n) !important;
     }
@@ -569,7 +569,7 @@ $nsize: -60;
 }
 
 @include media.breakpoint-up(lg) {
-  @for $n from -1 through $nsize {
+  @for $n from -1 through $pmnsize {
     .nfs-lg-#{$n} {
       font-size: util.toRem($n) !important;
     }

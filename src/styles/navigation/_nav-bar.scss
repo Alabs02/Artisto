@@ -1,0 +1,28 @@
+@use '../library' as base;
+
+.navbar {
+  width: 100%;
+  padding: base.toRem(20) base.toRem(48);
+
+  @include base.flex-center-between();
+
+  &__media {
+    width: base.toRem(121);
+    height: base.toRem(27.35);
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__link {
+    margin-left: base.toRem(50);
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+}

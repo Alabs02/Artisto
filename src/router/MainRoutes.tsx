@@ -6,16 +6,17 @@ import { Route } from 'react-router-dom';
 // LAYOUTS
 
 // PAGES
-import { Home } from '@/pages/main.pages';
+import { HomePage, PreviewPage } from '@/pages/main.pages';
 
 const MainRoutes = () => {
   return (
     <Fragment>
       <Route>
-        <Route index element={<Home />} />
+        <Route index element={<HomePage />} />
+        <Route path="/preview/:slug/:id" element={<PreviewPage />} />
       </Route>
     </Fragment>
   );
-}
+};
 
 export { MainRoutes as default };

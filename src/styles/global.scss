@@ -1,0 +1,23 @@
+// NPROGRESS
+@forward 'nprogress';
+
+// NAVIGATION STYLES
+@forward 'navigation';
+
+// SECTION STYLES
+@forward 'sections';
+
+// PAGE STYLES
+@forward 'pages';
+
+// CORE COMPONENT STYLES
+@forward 'core';
+
+// FORM SYTLES
+@forward 'forms';
+
+/* Override default variable */
+$skeleton-element-color: var(--bg-accent-dark-100);
+
+/* Then import scss source file */
+@import 'skeleton-screen-css/dist/index.scss';

@@ -1,0 +1,83 @@
+@use '../library' as base;
+
+.header-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  &__body {
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__heading {
+    font-size: base.toRem(68);
+    line-height: base.toRem(72);
+    letter-spacing: base.toRem(-0.48);
+  }
+
+  &__copy {
+    font-size: base.toRem(20);
+    line-height: base.toRem(30);
+    letter-spacing: base.toRem(-0.16);
+  }
+
+  &__spiral {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__btn {
+    font-size: base.toRem(20);
+    width: base.toRem(208.64);
+    height: base.toRem(77.6);
+
+    .btn--panel {
+      top: base.toRem(6);
+      right: base.toRem(-12);
+    }
+  }
+
+  &__media {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+
+  &__star {
+    position: absolute;
+    left: 36%;
+    bottom: 10%;
+  }
+}
+
+@include base.breakpoint-up(md) {
+  .header-section {
+    &__heading {
+      width: 85%;
+      margin-top: base.toRem(105);
+    }
+
+    &__copy {
+      width: 70%;
+    }
+  }
+}
+
+@include base.breakpoint-custom-up(1400) {
+  .header-section {
+    &__heading {
+      width: 55%;
+      margin-top: base.toRem(105);
+    }
+
+    &__copy {
+      width: 45%;
+    }
+  }
+}

@@ -11,6 +11,6 @@ const Router = () => {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export { Router as default };

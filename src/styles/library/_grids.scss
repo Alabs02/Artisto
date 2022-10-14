@@ -178,3 +178,51 @@ $rowMax: 7;
     }
   }
 }
+
+@include media.breakpoint-up(xl) {
+  @for $col from 1 through $cols {
+    .grid {
+      &-col-xl-#{$col} {
+        grid-template-columns: repeat($col, minmax(0, 1fr));
+      }
+
+      &-rows-xl-#{$col} {
+        grid-template-rows: repeat($col, minmax(0, 1fr));
+      }
+    }
+
+    .col-span-xl-#{$col} {
+      grid-column: span $col / span $col;
+    }
+
+    @if ($col <=$rowMax) {
+      .row-span-xl-#{$col} {
+        grid-row: span $col / span $col;
+      }
+    }
+  }
+}
+
+@include media.breakpoint-custom-up(1400) {
+  @for $col from 1 through $cols {
+    .grid {
+      &-col-2xl-#{$col} {
+        grid-template-columns: repeat($col, minmax(0, 1fr));
+      }
+
+      &-rows-2xl-#{$col} {
+        grid-template-rows: repeat($col, minmax(0, 1fr));
+      }
+    }
+
+    .col-span-2xl-#{$col} {
+      grid-column: span $col / span $col;
+    }
+
+    @if ($col <=$rowMax) {
+      .row-span-2xl-#{$col} {
+        grid-row: span $col / span $col;
+      }
+    }
+  }
+}

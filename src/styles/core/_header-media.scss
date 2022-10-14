@@ -1,0 +1,30 @@
+@use '../library' as base;
+
+.header-media {
+  margin-top: base.toRem(100);
+
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+
+  &__bg {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__art {
+    position: absolute;
+    right: base.toRem(20);
+    bottom: base.toRem(20);
+    z-index: 3;
+  }
+
+  &__spiral {
+    position: absolute;
+    top: base.toRem(10);
+    left: 0;
+    z-index: 4;
+  }
+}
